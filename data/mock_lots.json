@@ -1,0 +1,51 @@
+[
+  {
+    "venue_id": 1,
+    "lot_id": "Lot A (VIP / Bus Zone)",
+    "lot_capacity": 100,
+    "current_occupancy": 60,
+    "is_overflow": false
+  },
+  {
+    "venue_id": 1,
+    "lot_id": "Lot B (General North)",
+    "lot_capacity": 200,
+    "current_occupancy": 150,
+    "is_overflow": false
+  },
+  {
+    "venue_id": 1,
+    "lot_id": "Lot C (General South)",
+    "lot_capacity": 150,
+    "current_occupancy": 110,
+    "is_overflow": false
+  },
+  {
+    "venue_id": 1,
+    "lot_id": "Lot D (East Overflow)",
+    "lot_capacity": 100,
+    "current_occupancy": 0,
+    "is_overflow": true
+  },
+  {
+    "venue_id": 2,
+    "lot_id": "Lot E (Main Deck)",
+    "lot_capacity": 150,
+    "current_occupancy": 120,
+    "is_overflow": false
+  },
+  {
+    "venue_id": 2,
+    "lot_id": "Lot F (Basement A)",
+    "lot_capacity": 200,
+    "current_occupancy": 185,
+    "is_overflow": false
+  },
+  {
+    "venue_id": 2,
+    "lot_id": "Lot G (Overflow Back Lot)",
+    "lot_capacity": 100,
+    "current_occupancy": 0,
+    "is_overflow": true
+  }
+]

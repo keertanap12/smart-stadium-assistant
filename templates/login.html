@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stadium Ops Assistant - Login</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="auth-body">
+    <main class="auth-container">
+        <div class="card auth-card">
+            <div class="auth-header">
+                <span class="pulse-indicator" aria-hidden="true"></span>
+                <h2>Stadium Ops Assistant</h2>
+                <p>Live Operations Command Center</p>
+            </div>
+            
+            <h3 class="auth-title">Log In</h3>
+
+            <!-- Flash messages for auth error feedback -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert-banner {{ category }}" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            <form action="{{ url_for('login') }}" method="POST" class="control-form" novalidate>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="name@example.com" aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="••••••••" aria-required="true">
+                </div>
+                <button type="submit" class="btn btn-primary mt-6">Log In</button>
+            </form>
+
+            <div class="auth-footer-links">
+                <p>New to the hub? <a href="{{ url_for('signup') }}">Sign Up here</a></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
